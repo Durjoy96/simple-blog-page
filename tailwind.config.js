@@ -10,6 +10,9 @@ export default {
         "base-content-secondary": "rgba(17, 17, 17, 0.6)",
         primary: "#6047EC",
       },
+      fontFamily: {
+        "exo-2": ["Exo 2", "sans-serif"],
+      },
     },
   },
   plugins: [],

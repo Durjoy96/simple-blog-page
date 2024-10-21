@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="grid grid-cols-[1fr_.5fr] gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_.5fr]">
         <Blogs></Blogs>
         <div className="mt-6">
           <SpentTime></SpentTime>
