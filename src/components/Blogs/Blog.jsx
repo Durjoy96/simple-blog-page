@@ -40,7 +40,7 @@ const Blog = ({ data }) => {
           </span>
         </div>
       </div>
-      <h2 className="max-w-lg text-2xl font-bold text-base-content py-4 cursor-pointer hover:underline hover:text-primary md:text-3xl lg:text-4xl">
+      <h2 className="max-w-xl text-2xl font-bold text-base-content py-4 cursor-pointer hover:underline hover:text-primary md:text-3xl lg:text-4xl">
         {title}
       </h2>
       <span className="inline-block text-base font-medium text-base-content-secondary md:text-lg lg:text-xl">
