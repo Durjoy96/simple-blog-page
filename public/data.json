@@ -1,0 +1,52 @@
+[
+  {
+    "thumbnail": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_img": "https://images.pexels.com/photos/3209624/pexels-photo-3209624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "Jane Doe",
+    "publish_date": "Oct 15, 2024",
+    "read_time": 8,
+    "title": "The Future of Web Development in 2025",
+    "hashtags": ["#webdevelopment", "#future", "#technology", "#2025"]
+  },
+  {
+    "thumbnail": "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_img": "https://images.pexels.com/photos/1270076/pexels-photo-1270076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "John Smith",
+    "publish_date": "Oct 10, 2024",
+    "read_time": 5,
+    "title": "Understanding AI's Role in Everyday Life",
+    "hashtags": ["#AI", "#artificialintelligence", "#techtrends", "#automation"]
+  },
+  {
+    "thumbnail": "https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_img": "https://images.pexels.com/photos/2905820/pexels-photo-2905820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "Emily Johnson",
+    "publish_date": "Sep 30, 2024",
+    "read_time": 6,
+    "title": "Top 10 JavaScript Libraries for Developers",
+    "hashtags": ["#javascript", "#programming", "#libraries", "#webdev"]
+  },
+  {
+    "thumbnail": "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_img": "https://images.pexels.com/photos/2341350/pexels-photo-2341350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "Michael Lee",
+    "publish_date": "Sep 20, 2024",
+    "read_time": 7,
+    "title": "How to Build a Personal Brand in Tech",
+    "hashtags": [
+      "#personalbranding",
+      "#techcareers",
+      "#growth",
+      "#digitalmarketing"
+    ]
+  },
+  {
+    "thumbnail": "https://images.pexels.com/photos/4065137/pexels-photo-4065137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1g",
+    "author_img": "https://images.pexels.com/photos/15502152/pexels-photo-15502152/free-photo-of-posed-photo-of-a-young-woman-in-a-black-hat-covered-in-snow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "Sophia Williams",
+    "publish_date": "Aug 25, 2024",
+    "read_time": 4,
+    "title": "Boost Your Productivity with These Time Management Tools",
+    "hashtags": ["#productivity", "#timemanagement", "#tools", "#worksmarter"]
+  }
+]
