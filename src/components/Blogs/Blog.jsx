@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
-const Blog = ({ data }) => {
+import { CiBookmark } from "react-icons/ci";
+
+const Blog = ({ data, getBookmarkedData }) => {
   const {
     thumbnail,
     author_img,
@@ -34,9 +36,15 @@ const Blog = ({ data }) => {
             {publish_date}
           </p>
         </div>
-        <div>
+        <div className="flex items-center gap-3">
           <span className="text-base font-medium text-base-content-secondary md:text-lg lg:text-xl">
             {read_time} min read
+          </span>
+          <span>
+            <CiBookmark
+              onClick={() => getBookmarkedData(data)}
+              className="w-6 h-6 cursor-pointer fill-base-content-secondary"
+            />
           </span>
         </div>
       </div>
@@ -64,6 +72,7 @@ Blog.propTypes = {
     title: PropTypes.string.isRequired,
     hashtags: PropTypes.array.isRequired,
   }).isRequired,
+  getBookmarkedData : PropTypes.func.isRequired,
 };
 
 export default Blog;
