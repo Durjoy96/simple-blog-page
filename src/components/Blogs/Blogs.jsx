@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Blog from "./Blog";
 import PropTypes from "prop-types";
 
-const Blogs = ({ getBookmarkedData }) => {
+const Blogs = ({ getBookmarkedData, getTime }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const Blogs = ({ getBookmarkedData }) => {
           key={idx}
           data={item}
           getBookmarkedData={getBookmarkedData}
+          getTime = {getTime}
         ></Blog>
       ))}
     </div>
@@ -26,6 +27,7 @@ const Blogs = ({ getBookmarkedData }) => {
 
 Blogs.propTypes = {
   getBookmarkedData: PropTypes.func.isRequired,
+  getTime: PropTypes.func.isRequired,
 };
 
 export default Blogs;

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { CiBookmark } from "react-icons/ci";
 
-const Blog = ({ data, getBookmarkedData }) => {
+const Blog = ({ data, getBookmarkedData, getTime }) => {
   const {
     thumbnail,
     author_img,
@@ -54,7 +54,10 @@ const Blog = ({ data, getBookmarkedData }) => {
       <span className="inline-block text-base font-medium text-base-content-secondary md:text-lg lg:text-xl">
         {hashtags.join(" ")}
       </span>
-      <button className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 md:text-lg lg:text-xl">
+      <button
+        onClick={() => getTime(read_time)}
+        className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 md:text-lg lg:text-xl"
+      >
         Mark as read
       </button>
       <hr className="mt-6" />
@@ -72,7 +75,8 @@ Blog.propTypes = {
     title: PropTypes.string.isRequired,
     hashtags: PropTypes.array.isRequired,
   }).isRequired,
-  getBookmarkedData : PropTypes.func.isRequired,
+  getBookmarkedData: PropTypes.func.isRequired,
+  getTime: PropTypes.func.isRequired,
 };
 
 export default Blog;
