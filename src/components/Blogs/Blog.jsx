@@ -55,7 +55,7 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
         {hashtags.join(" ")}
       </span>
       <button
-        onClick={() => getTime(read_time)}
+        onClick={() => getTime(data)}
         className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 md:text-lg lg:text-xl"
       >
         Mark as read

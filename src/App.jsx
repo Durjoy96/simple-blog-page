@@ -10,13 +10,15 @@ function App() {
 
   const getBookmarkedData = (data) => {
     const newArr = [...bookmarkData, data];
-    console.log(newArr);
     setBookmarkData(newArr);
   };
 
-  const getTime = (time) => {
-    const newArr = [...times, time];
+  const getTime = (data) => {
+    const newArr = [...times, data.read_time];
     setTimes(newArr);
+    //remove the read blog from the bookmark
+    const newBookmarkArr = bookmarkData.filter((item) => item !== data);
+    setBookmarkData(newBookmarkArr);
   };
 
   return (
