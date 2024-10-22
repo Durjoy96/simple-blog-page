@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { CiBookmark } from "react-icons/ci";
 
 const Blog = ({ data, getBookmarkedData, getTime }) => {
@@ -11,6 +12,20 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
     title,
     hashtags,
   } = data;
+
+  const [buttonText, setButtonText] = useState("Mark as read");
+  const [disable, setDisable] = useState(false);
+
+  const handleClick = () => {
+    getTime(data);
+    alreadyRead();
+  };
+
+  function alreadyRead() {
+    setButtonText("Already read");
+    setDisable(true);
+  }
+
   return (
     <div className="mt-6">
       <div className="w-full h-[200px] md:h-[350px] lg:h-[450px]">
@@ -55,10 +70,11 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
         {hashtags.join(" ")}
       </span>
       <button
-        onClick={() => getTime(data)}
-        className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 md:text-lg lg:text-xl"
+        disabled={disable}
+        onClick={handleClick}
+        className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 disabled:text-primary/60 disabled:cursor-not-allowed md:text-lg lg:text-xl"
       >
-        Mark as read
+        {buttonText}
       </button>
       <hr className="mt-6" />
     </div>
