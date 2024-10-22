@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { CiBookmark } from "react-icons/ci";
+import { CiBookmark, CiBookmarkCheck } from "react-icons/ci";
 
 const Blog = ({ data, getBookmarkedData, getTime }) => {
   const {
@@ -15,10 +15,16 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
 
   const [buttonText, setButtonText] = useState("Mark as read");
   const [disable, setDisable] = useState(false);
+  const [bookmarkBtn, setBookmarkBtn] = useState(false);
 
   const handleClick = () => {
     getTime(data);
     alreadyRead();
+  };
+
+  const bookmarkBtnHandler = () => {
+    getBookmarkedData(data);
+    bookmarkBtn ? setBookmarkBtn(false) : setBookmarkBtn(true);
   };
 
   function alreadyRead() {
@@ -56,10 +62,17 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
             {read_time} min read
           </span>
           <span>
-            <CiBookmark
-              onClick={() => getBookmarkedData(data)}
-              className="w-6 h-6 cursor-pointer fill-base-content-secondary"
-            />
+            {bookmarkBtn ? (
+              <CiBookmarkCheck
+                onClick={bookmarkBtnHandler}
+                className="w-6 h-6 cursor-pointer fill-primary"
+              />
+            ) : (
+              <CiBookmark
+                onClick={bookmarkBtnHandler}
+                className="w-6 h-6 cursor-pointer fill-base-content-secondary"
+              />
+            )}
           </span>
         </div>
       </div>
@@ -72,7 +85,7 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
       <button
         disabled={disable}
         onClick={handleClick}
-        className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 disabled:text-primary/60 disabled:cursor-not-allowed md:text-lg lg:text-xl"
+        className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 disabled:text-primary/60 disabled:border-primary/60 disabled:cursor-text  md:text-lg lg:text-xl"
       >
         {buttonText}
       </button>

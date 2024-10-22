@@ -11,6 +11,10 @@ function App() {
   const getBookmarkedData = (data) => {
     const newArr = [...bookmarkData, data];
     setBookmarkData(newArr);
+    if (bookmarkData.includes(data)) {
+      const newBookmarkArr = bookmarkData.filter((item) => item !== data);
+      setBookmarkData(newBookmarkArr);
+    }
   };
 
   const getTime = (data) => {
