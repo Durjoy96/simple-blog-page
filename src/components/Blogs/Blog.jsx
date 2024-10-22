@@ -30,6 +30,7 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
   function alreadyRead() {
     setButtonText("Already read");
     setDisable(true);
+    bookmarkBtn ? setBookmarkBtn(false) : setBookmarkBtn(true);
   }
 
   return (
