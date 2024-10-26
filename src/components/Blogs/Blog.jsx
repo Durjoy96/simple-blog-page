@@ -17,19 +17,21 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
   const [disable, setDisable] = useState(false);
   const [bookmarkBtn, setBookmarkBtn] = useState(false);
 
-  const handleClick = () => {
+  const markAsReadHandler = () => {
     getTime(data);
     alreadyRead();
   };
 
   const bookmarkBtnHandler = () => {
     getBookmarkedData(data);
+    //remove the bookmark success icon
     bookmarkBtn ? setBookmarkBtn(false) : setBookmarkBtn(true);
   };
 
   function alreadyRead() {
     setButtonText("Already read");
     setDisable(true);
+    //remove the bookmark success icon
     bookmarkBtn ? setBookmarkBtn(false) : setBookmarkBtn(true);
   }
 
@@ -85,7 +87,7 @@ const Blog = ({ data, getBookmarkedData, getTime }) => {
       </span>
       <button
         disabled={disable}
-        onClick={handleClick}
+        onClick={markAsReadHandler}
         className="block mt-5 border-b border-primary text-primary text-base font-semibold hover:text-primary/80 hover:border-primary/80 disabled:text-primary/60 disabled:border-primary/60 disabled:cursor-text  md:text-lg lg:text-xl"
       >
         {buttonText}
